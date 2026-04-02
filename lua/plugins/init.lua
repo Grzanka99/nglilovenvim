@@ -14,7 +14,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 local specs = {
-  { "tpope/vim-sleuth" },
   {
     "sindrets/diffview.nvim",
     cmd = "DiffviewOpen",
@@ -28,7 +27,6 @@ local specs = {
   { import = "plugins.config.lualine" },
   { import = "plugins.config.harpoon" },
   { import = "plugins.config.telescope" },
-  { import = "plugins.config.nvim-comment" },
   { import = "plugins.config.nvim-autopairs" },
 }
 

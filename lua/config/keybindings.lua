@@ -23,6 +23,12 @@ vim.keymap.set("n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { de
 vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Show LSP hover info" })
 vim.keymap.set("n", "D", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Show diagnostics" })
 
+-- Comments
+vim.keymap.set("n", "<M-c>", "gcc", { desc = "Toggle comment", remap = true })
+vim.keymap.set("v", "<M-c>", "gc", { desc = "Toggle comment", remap = true })
+
 -- usefull
 vim.keymap.set("n", "<Leader>w", ":w<CR>", { desc = "Save file" })
 vim.keymap.set("x", "p", '"_dP', { desc = "Paste without yanking" })
+
+vim.cmd("nnoremap q <Nop>")
