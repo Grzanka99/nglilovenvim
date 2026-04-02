@@ -15,6 +15,7 @@ return {
 					enabled = true,
 					leave_dirs_open = true,
 				},
+				use_libuv_file_watcher = true,
 			},
 			window = {
 				position = "right",
