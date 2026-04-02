@@ -17,7 +17,7 @@ vim.g.mapleader = " "
 -- Manually source .nvim.lua early so flags are available
 local exrc = vim.fn.fnamemodify(".nvim.lua", ":p")
 if vim.fn.filereadable(exrc) == 1 then
-  vim.cmd("sandbox source " .. exrc)
+	vim.cmd("sandbox source " .. exrc)
 end
 
 require("config.options")
