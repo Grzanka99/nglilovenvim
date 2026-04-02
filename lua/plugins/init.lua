@@ -36,7 +36,7 @@ local loaded_exrc = {}
 local function extend_specs(specsref, mod)
   if loaded_exrc[mod] then return end
   loaded_exrc[mod] = true
-  vim.list_extend(specsref, require(mod))
+  vim.list_extend(specsref, { { import = mod } })
 end
 
 if vim.g.project_type ~= nil then
@@ -47,6 +47,7 @@ if vim.g.project_type ~= nil then
   if vim.tbl_contains(vim.g.project_type, "html") then
     extend_specs(specs, "plugins.exrc.html")
     extend_specs(specs, "plugins.exrc.css")
+    print(vim.inspect(specs))
   end
 
 
@@ -63,6 +64,9 @@ if vim.g.project_type ~= nil then
     extend_specs(specs, "plugins.exrc.html")
     extend_specs(specs, "plugins.exrc.css")
   end
+
+  print(vim.inspect(specs))
 end
+
 
 require("lazy").setup(specs)
