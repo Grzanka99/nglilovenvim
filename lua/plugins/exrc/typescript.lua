@@ -1,4 +1,4 @@
-vim.lsp.config('tsgo', {
+vim.lsp.config('ts_ls', {
   on_attach = function(client)
     client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.documentRangeFormattingProvider = false
@@ -9,7 +9,7 @@ vim.lsp.config('tsgo', {
   }
 })
 
-vim.lsp.enable("tsgo")
+vim.lsp.enable("ts_ls")
 
 return {
   {
