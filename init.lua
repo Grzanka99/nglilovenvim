@@ -24,7 +24,7 @@ require("config.options")
 require("config.keybindings")
 require("config.autocommands")
 
+require("plugins")
+
 require("agentic.autoread")
 require("agentic.server")
-
-require("plugins")

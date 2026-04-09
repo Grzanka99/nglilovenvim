@@ -29,6 +29,7 @@ local specs = {
   { import = "plugins.config.harpoon" },
   { import = "plugins.config.telescope" },
   { import = "plugins.config.nvim-autopairs" },
+  { import = "plugins.config.snacks" },
 }
 
 local loaded_exrc = {}

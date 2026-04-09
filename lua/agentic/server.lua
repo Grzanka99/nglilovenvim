@@ -14,5 +14,10 @@ local function get_sock_path()
 end
 
 if not is_remote() then
-  vim.fn.serverstart(get_sock_path())
+  local sock = get_sock_path()
+  if vim.fn.filereadable(sock) == 1 then
+    vim.notify("Server socket already exists at " .. sock, vim.log.levels.WARN)
+  else
+    vim.fn.serverstart(sock)
+  end
 end
