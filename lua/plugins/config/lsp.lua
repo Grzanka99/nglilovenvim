@@ -2,12 +2,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     lazy = false,
-    dependencies = {
-      { "j-hui/fidget.nvim" },
-    },
-    config = function()
-      require("fidget").setup({})
-    end,
   },
   {
     "saghen/blink.cmp",
