@@ -21,13 +21,11 @@ local specs = {
   },
   { import = "plugins.config.colorscheme" },
   { import = "plugins.config.lsp" },
-  { import = "plugins.config.neotree" },
   { import = "plugins.config.gitsigns" },
   { import = "plugins.config.treesitter" },
   { import = "plugins.config.bufferline" },
   { import = "plugins.config.lualine" },
   { import = "plugins.config.harpoon" },
-  { import = "plugins.config.telescope" },
   { import = "plugins.config.nvim-autopairs" },
   { import = "plugins.config.snacks" },
 }
