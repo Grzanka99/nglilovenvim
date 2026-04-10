@@ -3,11 +3,13 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     keys = {
-      { "gd",         vim.lsp.buf.definition,  desc = "Goto definition" },
-      { "gD",         vim.lsp.buf.declaration, desc = "Goto declaration" },
-      { "K",          vim.lsp.buf.hover,       desc = "Hover" },
-      { "<Leader>da", vim.lsp.buf.code_action, desc = "Code action" },
-      { "<Leader>dr", vim.lsp.buf.rename,      desc = "Rename" },
+      { "gd",         function() Snacks.picker.lsp_definitions() end,  desc = "Goto definition" },
+      { "gr",         function() Snacks.picker.lsp_references() end,   desc = "Goto references" },
+      { "gD",         function() Snacks.picker.lsp_declarations() end, desc = "Goto declaration" },
+      { "K",          vim.lsp.buf.hover,                               desc = "Hover" },
+      { "D",          vim.diagnostic.open_float,                       desc = "Diagnostics" },
+      { "<Leader>da", vim.lsp.buf.code_action,                         desc = "Code action" },
+      { "<Leader>dr", vim.lsp.buf.rename,                              desc = "Rename" },
     },
   },
   {

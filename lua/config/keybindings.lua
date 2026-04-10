@@ -16,13 +16,6 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to window down" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to window up" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to window right" })
 
-
--- Native LSP
-vim.keymap.set("n", "<Leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Go to LSP definition" })
-vim.keymap.set("n", "<Leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { desc = "Go to LSP declaration" })
-vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { desc = "Show LSP hover info" })
-vim.keymap.set("n", "D", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Show diagnostics" })
-
 -- Comments
 vim.keymap.set("n", "<M-c>", "gcc", { desc = "Toggle comment", remap = true })
 vim.keymap.set("v", "<M-c>", "gc", { desc = "Toggle comment", remap = true })

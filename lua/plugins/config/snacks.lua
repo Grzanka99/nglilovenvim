@@ -4,6 +4,7 @@ return {
   lazy = false,
   opts = {
     notifier = { enabled = true },
+    dashboard = { enabled = true },
     picker = {
       enabled = true,
       sources = {
