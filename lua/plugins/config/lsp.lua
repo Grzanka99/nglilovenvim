@@ -2,6 +2,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     lazy = false,
+    keys = {
+      { "gd",         vim.lsp.buf.definition,  desc = "Goto definition" },
+      { "gD",         vim.lsp.buf.declaration, desc = "Goto declaration" },
+      { "K",          vim.lsp.buf.hover,       desc = "Hover" },
+      { "<Leader>da", vim.lsp.buf.code_action, desc = "Code action" },
+      { "<Leader>dr", vim.lsp.buf.rename,      desc = "Rename" },
+    },
   },
   {
     "saghen/blink.cmp",
@@ -21,36 +28,6 @@ return {
           ["<Tab>"] = { "snippet_forward", "select_next", "fallback" },
           ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
           ["<C-Space>"] = { "show", "fallback" }
-        }
-      })
-    end
-  },
-  {
-    "nvimdev/lspsaga.nvim",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons",
-    },
-    cmd = "Lspsaga",
-    keys = {
-      { "<Leader>da", ":Lspsaga code_action<CR>" },
-      { "<Leader>dr", ":Lspsaga rename<CR>" },
-      { "<Leader>dp", ":Lspsaga peek_definition<CR>" },
-      { "<Leader>df", ":Lspsaga finder<CR>" },
-      { "<Leader>o",  ":Lspsaga outline<CR>" },
-      { "gd",         ":Lspsaga goto_definition<CR>" },
-    },
-    config = function()
-      require("lspsaga").setup({
-        finder = {
-          keys = {
-            toggle_or_open = "<CR>"
-          }
-        },
-        outline = {
-          keys = {
-            toggle_or_jump = "<CR>"
-          }
         }
       })
     end

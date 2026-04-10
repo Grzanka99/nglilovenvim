@@ -15,7 +15,7 @@ return {
     },
     explorer = { enabled = true },
     bigfile = { enabled = true },
-    input = { enabled = true },
+    input = { enabled = true, win = { relative = "cursor" } },
     words = { enabled = true },
     statuscolumn = { enabled = true },
   },
