@@ -1,5 +1,5 @@
 return {
-  "nvim-mini/mini.icons",
+  "nechasnovski/mini.icons",
   lazy = true,
   opts = {
     file = {
@@ -17,4 +17,3 @@ return {
     end
   end,
 }
-

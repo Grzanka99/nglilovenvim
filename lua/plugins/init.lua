@@ -27,6 +27,7 @@ local specs = {
   { import = "plugins.config.lualine" },
   { import = "plugins.config.harpoon" },
   { import = "plugins.config.mini-icons" },
+  { import = "plugins.config.mini-pairs" },
   { import = "plugins.config.snacks" },
 }
 
