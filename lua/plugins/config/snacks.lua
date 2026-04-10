@@ -18,6 +18,7 @@ return {
     input = { enabled = true, win = { relative = "cursor" } },
     words = { enabled = true },
     statuscolumn = { enabled = true },
+    rename = { enabled = true }
   },
   keys = {
     { "<Leader>ff", function() Snacks.picker.files() end,       desc = "Find files" },
