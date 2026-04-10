@@ -26,7 +26,6 @@ local specs = {
   { import = "plugins.config.bufferline" },
   { import = "plugins.config.lualine" },
   { import = "plugins.config.harpoon" },
-  { import = "plugins.config.nvim-autopairs" },
   { import = "plugins.config.mini-icons" },
   { import = "plugins.config.snacks" },
 }

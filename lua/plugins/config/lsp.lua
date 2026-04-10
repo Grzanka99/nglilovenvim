@@ -23,6 +23,35 @@ return {
           default = { "lsp", "snippets", "buffer", "path" }
         },
         fuzzy = { implementation = "rust" },
+        completion = {
+          accept = {
+            auto_brackets = {
+              enabled = true,
+            },
+          },
+          -- NOTE: Just testing
+          documentation = {
+            auto_show = true,
+            auto_show_delay_ms = 200,
+          },
+        },
+        cmdline = {
+          enabled = true,
+          keymap = {
+            preset = "cmdline",
+            ["<Right>"] = false,
+            ["<Left>"] = false,
+          },
+          completion = {
+            list = { selection = { preselect = false } },
+            menu = {
+              auto_show = function(ctx)
+                return vim.fn.getcmdtype() == ":"
+              end,
+            },
+            ghost_text = { enabled = true },
+          },
+        },
         keymap = {
           ["<CR>"] = { "accept", "fallback" },
           ["<C-j>"] = { "select_next", "fallback_to_mappings" },
