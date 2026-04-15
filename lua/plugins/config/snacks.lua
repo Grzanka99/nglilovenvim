@@ -14,7 +14,7 @@ return {
         },
       },
     },
-    explorer = { enabled = true },
+    explorer = { enabled = true, trash = false },
     bigfile = { enabled = true },
     input = { enabled = true, win = { relative = "cursor" } },
     words = { enabled = true },
