@@ -1,5 +1,5 @@
 return {
-  "nechasnovski/mini.icons",
+  "echasnovski/mini.icons",
   lazy = true,
   opts = {
     file = {
