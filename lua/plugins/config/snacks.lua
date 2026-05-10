@@ -11,6 +11,7 @@ return {
         explorer = {
           layout = { layout = { position = "right" } },
           win = { list = { border = "left" } },
+          include = { "plans", "plans/**" },
         },
       },
     },
