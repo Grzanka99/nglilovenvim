@@ -1,15 +1,17 @@
-vim.lsp.config('ts_ls', {
+vim.lsp.config("vtsls", {
   on_attach = function(client)
     client.server_capabilities.documentFormattingProvider = false
     client.server_capabilities.documentRangeFormattingProvider = false
   end,
-  preferences = {
-    includeCompletionsForModuleExports = true,
-    includeCompletionsWithInsertText = true,
-  }
+  init_options = {
+    preferences = {
+      includeCompletionsForModuleExports = true,
+      includeCompletionsWithInsertText = true,
+    },
+  },
 })
 
-vim.lsp.enable("ts_ls")
+vim.lsp.enable("vtsls")
 
 return {
   {
