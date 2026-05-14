@@ -1,7 +1,17 @@
 return {
   {
+    "mason-org/mason.nvim",
+    lazy = false,
+    opts = {
+      PATH = "prepend",
+    },
+  },
+  {
     "neovim/nvim-lspconfig",
     lazy = false,
+    dependencies = {
+      "mason-org/mason.nvim",
+    },
     keys = {
       { "gd",         function() Snacks.picker.lsp_definitions() end,  desc = "Goto definition" },
       { "gr",         function() Snacks.picker.lsp_references() end,   desc = "Goto references" },
