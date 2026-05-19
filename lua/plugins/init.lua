@@ -15,10 +15,7 @@ if not vim.uv.fs_stat(lazypath) then
 end
 
 local specs = {
-  {
-    "sindrets/diffview.nvim",
-    cmd = "DiffviewOpen",
-  },
+  { import = "plugins.config.codediff" },
   { import = "plugins.config.colorscheme" },
   { import = "plugins.config.lsp" },
   { import = "plugins.config.gitsigns" },
