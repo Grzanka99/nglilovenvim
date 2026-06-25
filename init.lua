@@ -27,4 +27,4 @@ require("config.autocommands")
 require("plugins")
 
 require("agentic.autoread")
-require("agentic.server")
+-- require("agentic.server")

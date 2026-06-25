@@ -45,6 +45,13 @@ if vim.g.project_type ~= nil then
     extend_specs(specs, "plugins.exrc.css")
   end
 
+  if vim.tbl_contains(vim.g.project_type, "css") then
+    extend_specs(specs, "plugins.exrc.css")
+  end
+
+  if vim.tbl_contains(vim.g.project_type, "php") then
+    extend_specs(specs, "plugins.exrc.php")
+  end
 
   if vim.tbl_contains(vim.g.project_type, "biome") then
     extend_specs(specs, "plugins.exrc.biome")

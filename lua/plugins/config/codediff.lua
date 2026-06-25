@@ -7,6 +7,7 @@ return {
   },
   opts = {
     diff = {
+      layout = "inline",
       compute_moves = true,
     },
     explorer = {
