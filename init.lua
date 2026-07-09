@@ -28,3 +28,5 @@ require("plugins")
 
 require("agentic.autoread")
 -- require("agentic.server")
+--
+vim.cmd("colorscheme koda-moss")
