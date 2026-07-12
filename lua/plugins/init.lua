@@ -57,6 +57,10 @@ if vim.g.project_type ~= nil then
     extend_specs(specs, "plugins.exrc.biome")
   end
 
+  if vim.tbl_contains(vim.g.project_type, "ox") then
+    extend_specs(specs, "plugins.exrc.ox")
+  end
+
   if vim.tbl_contains(vim.g.project_type, "typescript") then
     extend_specs(specs, "plugins.exrc.typescript")
   end
