@@ -5,6 +5,13 @@ return {
   opts = {
     notifier = { enabled = true },
     dashboard = { enabled = true },
+    image = {
+      enabled = true,
+      doc = {
+        inline = true,
+        float = true
+      }
+    },
     picker = {
       enabled = true,
       sources = {
